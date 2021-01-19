@@ -5,14 +5,14 @@ class Dustbin{
           'friction' : 0.3,
           'density' : 1.0,
      }
-          this.bottom = Bodies.rectangle(width/2,630,200,20,{isStatic : true})
-          World.add(world,bottom);
+          this.bottom = Bodies.rectangle(width/2,630,200,20);
+          World.add(world,this.bottom);
     
-          this.rightSide = Bodies.rectangle(500,610,20,100,{isStatic : true})
-          World.add(world,rightSide);
+          this.rightSide = Bodies.rectangle(500,610,20,100);
+          World.add(world,this.rightSide);
 
-          this.leftSide = Bodies.rectangle(300,610,20,100,{isStatic : true})
-          World.add(world,leftSide);
+          this.leftSide = Bodies.rectangle(300,610,20,100);
+          World.add(world,this.leftSide);
            this.w = w;
            this.h = h;
 
