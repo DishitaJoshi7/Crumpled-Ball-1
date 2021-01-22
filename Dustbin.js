@@ -5,26 +5,20 @@ class Dustbin{
           'friction' : 0.3,
           'density' : 1.0,
      }
-          this.bottom = Bodies.rectangle(width/2,630,200,20);
-          World.add(world,this.bottom);
-    
-          this.rightSide = Bodies.rectangle(500,610,20,100);
-          World.add(world,this.rightSide);
+     this.dustbin = Bodies.rectangle(x,y,w,h,op);
+     World.add(world, this.dustbin);
 
-          this.leftSide = Bodies.rectangle(300,610,20,100);
-          World.add(world,this.leftSide);
-           this.w = w;
-           this.h = h;
+     this.w = w;
+     this.h = h;
+
 
    } 
      display(){
-        var pos = this.bottom.position;
-        var pos = this.rightSide.position;
-        var pos = this.leftSide.position;
+        var pos = this.dustbin.position;
         push()
-        translate(pos.x,pos.y)
+        translate(this.x,this.y)
         rectMode(CENTER)
-        rect(0,0,this.w,this.h)
+        rect(0,0,this.w,this.h);
         pop()
      }
 
