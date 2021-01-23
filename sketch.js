@@ -23,10 +23,10 @@ function setup() {
 
 	//Create the Bodies Here.
 	ground = new Ground(400,350,800,15);
-	ball = new Paper(200,200,15);
-	rightSide = new Dustbin(500,610,20,100);
-	leftSide = new Dustbin(300,610,20,100);
-	bottom = new Dustbin(400,630,200,20);
+	ball = new Paper(200,200,30);
+	rightside = new Dustbin(680,300,20,100);
+	leftside = new Dustbin(480,300,20,100);
+	bottom = new Dustbin(580,340,200,20);
 
 	Engine.run(engine);
   
@@ -39,13 +39,24 @@ function draw() {
   
   ground.show();
   ball.display();
-  rightSide.display();
-  leftSide.display();
+  rightside.display();
+  leftside.display();
   bottom.display();
 
   
  
 }
+
+function keyPressed(){
+	if(keyCode === UP_ARROW){
+
+        Matter.Body.applyForce(ball.object, ball.object.position,{x:70 , y:-70})
+
+	}
+
+}
+
+
 
 
 
